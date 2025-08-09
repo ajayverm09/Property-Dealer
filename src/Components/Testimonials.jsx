@@ -46,33 +46,32 @@ function Testimonials() {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % testimonials.length);
     }, 5000);
-
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <section className="bg-white py-12 px-4 text-center">
-      <h2 className="text-3xl font-semibold mb-8 tracking-wide text-gray-800">
+    <section className="bg-white py-8 sm:py-12 px-4 sm:px-6 text-center">
+      <h2 className="text-2xl sm:text-3xl font-semibold mb-6 sm:mb-8 tracking-wide text-gray-800">
         TESTIMONIALS
       </h2>
 
-      <div className="max-w-3xl mx-auto bg-white shadow-md rounded p-6 text-gray-700 relative transition-all duration-500 ease-in-out">
-        <p className="text-2xl leading-relaxed italic relative">
-          <span className="text-5xl text-gray-400 absolute -top-4 left-0">“</span>
+      <div className="max-w-xl sm:max-w-3xl mx-auto bg-white shadow-md rounded p-4 sm:p-6 text-gray-700 relative transition-all duration-500 ease-in-out">
+        <p className="text-lg sm:text-2xl leading-relaxed italic relative px-6 sm:px-0">
+          <span className="text-4xl sm:text-5xl text-gray-400 absolute -top-2 sm:-top-4 left-0">“</span>
           {testimonials[current].text}
-          <span className="text-5xl text-gray-400 absolute -bottom-4 right-0">”</span>
+          <span className="text-4xl sm:text-5xl text-gray-400 absolute -bottom-2 sm:-bottom-4 right-0">”</span>
         </p>
-        <p className="text-right mt-6 font-semibold text-gray-900">
+        <p className="text-right mt-4 sm:mt-6 font-semibold text-gray-900 text-sm sm:text-base">
           — {testimonials[current].name}
         </p>
       </div>
 
-      <div className="flex justify-center space-x-2 mt-6">
+      <div className="flex justify-center space-x-2 mt-4 sm:mt-6">
         {testimonials.map((_, index) => (
           <button
             key={index}
             onClick={() => setCurrent(index)}
-            className={`w-3 h-3 rounded-full transition-all duration-300 ${
+            className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-300 ${
               index === current ? "bg-blue-600 scale-125" : "bg-gray-300"
             }`}
           />

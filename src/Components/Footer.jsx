@@ -9,7 +9,7 @@ import {
 const Footer = () => {
   return (
     <footer className="bg-[#071d31] text-white py-10 text-sm">
-      <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-4 gap-8">
+      <div className="max-w-7xl mx-auto px-4 grid gap-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
 
         <div>
           <img src="/logo.png" alt="Deal Acres" className="w-20 mb-4" />
@@ -26,10 +26,9 @@ const Footer = () => {
           </p>
         </div>
 
-        
         <div>
-          <h3 className="text-3xl font-semibold mb-2">Quick Links</h3>
-          <ul className="space-y-2 text-lg">
+          <h3 className="text-xl font-semibold mb-3">Quick Links</h3>
+          <ul className="space-y-2">
             <li><a href="/" className="hover:text-blue-400">Home</a></li>
             <li><a href="/about" className="hover:text-blue-400">About us</a></li>
             <li><a href="/commercial" className="hover:text-blue-400">Commercial</a></li>
@@ -40,7 +39,7 @@ const Footer = () => {
         </div>
 
         <div>
-          <h3 className="text-3xl font-semibold mb-2">Legals</h3>
+          <h3 className="text-xl font-semibold mb-3">Legals</h3>
           <ul className="space-y-2">
             <li><a href="/privacy" className="hover:text-blue-400">Privacy Policies</a></li>
             <li><a href="/terms" className="hover:text-blue-400">Terms & Conditions</a></li>
@@ -49,9 +48,8 @@ const Footer = () => {
           </ul>
         </div>
 
-       
         <div>
-          <h3 className="text-lg font-semibold mb-2">Follow Us</h3>
+          <h3 className="text-xl font-semibold mb-3">Follow Us</h3>
           <div className="flex space-x-4 mt-2 text-xl">
             <a href="#"><FaFacebookF className="hover:text-blue-400" /></a>
             <a href="#"><FaYoutube className="hover:text-red-500" /></a>
@@ -62,12 +60,13 @@ const Footer = () => {
 
       </div>
 
-      
       <div className="text-gray-400 text-xs mt-10 px-4 max-w-6xl mx-auto">
         <p className="mb-4">
           <strong>Disclaimer:</strong> MRPL is only an intermediary offering its platform to advertise properties of Seller for a Customer/Buyer/User coming on its Website and is not and cannot be a party to or privy to or control in any manner any transactions between the Seller and the Customer/Buyer/User. All the offers and discounts on this Website have been extended by various Builder(s)/Developer(s) who have advertised their products.
-          <p class="mt-3">MRPL is only communicating the offers and not selling or rendering any of those products or services. It neither warrants nor is it making any representations with respect to offer(s) made on the site. MRPL shall neither be responsible nor liable to mediate or resolve any disputes or disagreements between the Customer/Buyer/User and the Seller and both Seller and Customer/Buyer/User shall settle all such disputes without involving MRPL in any manner. All trademarks, logos and names are properties of their respective Builder(s)/Developer(s)..
-        </p></p>
+        </p>
+        <p className="mb-4">
+          MRPL is only communicating the offers and not selling or rendering any of those products or services. It neither warrants nor is it making any representations with respect to offer(s) made on the site. MRPL shall neither be responsible nor liable to mediate or resolve any disputes or disagreements between the Customer/Buyer/User and the Seller and both Seller and Customer/Buyer/User shall settle all such disputes without involving MRPL in any manner. All trademarks, logos and names are properties of their respective Builder(s)/Developer(s).
+        </p>
         <p className="text-center text-sm text-gray-300">
           © 2025 <strong>Manchanda Realtors Pvt Ltd</strong>. All Rights Reserved by: <strong>MRPL</strong>
         </p>

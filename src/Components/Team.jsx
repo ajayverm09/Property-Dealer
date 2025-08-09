@@ -75,34 +75,36 @@ const teamMembers = [
 
 const Team = () => {
   return (
-    <div className="max-w-6xl mx-auto px-4 py-12">
-      <h1 className="text-4xl font-bold text-center text-gray-800 mb-12">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <h1 className="text-3xl sm:text-4xl font-bold text-center text-gray-800 mb-12">
         Our Team
       </h1>
-
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
         {teamMembers.map((member, index) => (
           <div
             key={index}
-            className="bg-white shadow-md rounded-md p-6 text-center flex flex-col items-center gap-4"
+            className="bg-white shadow-md rounded-lg p-6 text-center flex flex-col items-center gap-4 hover:shadow-lg transition-shadow duration-300"
           >
             {member.image ? (
               <img
                 src={member.image}
                 alt={member.name}
-                className="w-24 h-24 object-cover rounded-full"
+                className="w-24 h-24 sm:w-28 sm:h-28 object-cover rounded-full"
               />
             ) : (
-              <div className="w-24 h-24 rounded-full bg-gray-200 flex items-center justify-center text-gray-600 text-xl font-bold">
+              <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-gray-200 flex items-center justify-center text-gray-600 text-lg font-bold">
                 MRPL
               </div>
             )}
-            <h2 className="text-blue-700 font-semibold text-lg">
+            <h2 className="text-blue-700 font-semibold text-base sm:text-lg">
               {member.name}
             </h2>
-            <p className="text-sm text-gray-600">{member.role}</p>
-            <p className="text-sm text-gray-800">{member.phone}</p>
-            <a href={`mailto:${member.email}`} className="text-sm text-blue-500">
+            <p className="text-xs sm:text-sm text-gray-600">{member.role}</p>
+            <p className="text-xs sm:text-sm text-gray-800">{member.phone}</p>
+            <a
+              href={`mailto:${member.email}`}
+              className="text-xs sm:text-sm text-blue-500 break-words"
+            >
               {member.email}
             </a>
           </div>

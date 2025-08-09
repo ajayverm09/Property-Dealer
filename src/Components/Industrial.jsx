@@ -48,67 +48,65 @@ function Industrial() {
 
   return (
     <div>
-      
-      <div className="relative w-full h-36 flex items-center justify-center bg-cover bg-center"
-        style={{ backgroundImage: "url('https://manchandarealtors.com/wp-content/uploads/2021/06/industrial-1.jpeg')" }}>
+      <div
+        className="relative w-full h-36 md:h-48 flex items-center justify-center bg-cover bg-center"
+        style={{ backgroundImage: "url('https://manchandarealtors.com/wp-content/uploads/2021/06/industrial-1.jpeg')" }}
+      >
         <div className="absolute inset-0 bg-black/60"></div>
-        <p className="relative text-white text-3xl z-10">Contact Us</p>
+        <p className="relative text-white text-2xl md:text-3xl font-semibold z-10">Contact Us</p>
       </div>
 
       <div className="flex flex-col lg:flex-row max-w-7xl mx-auto px-4 py-8 gap-6">
-        
         <aside className="w-full lg:w-1/4 space-y-4">
           <div>
-            <label className="block font-semibold mb-1">CITY</label>
-            <select className="w-full border px-3 py-2">
+            <label className="block font-semibold mb-1 text-sm md:text-base">CITY</label>
+            <select className="w-full border px-3 py-2 rounded">
               <option>City</option>
             </select>
           </div>
           <div>
-            <label className="block font-semibold mb-1">STREET</label>
-            <select className="w-full border px-3 py-2">
+            <label className="block font-semibold mb-1 text-sm md:text-base">STREET</label>
+            <select className="w-full border px-3 py-2 rounded">
               <option>Street</option>
             </select>
           </div>
           <div>
-            <label className="block font-semibold mb-1">OFFER TYPE</label>
-            <select className="w-full border px-3 py-2">
+            <label className="block font-semibold mb-1 text-sm md:text-base">OFFER TYPE</label>
+            <select className="w-full border px-3 py-2 rounded">
               <option>Offer Type</option>
             </select>
           </div>
-          <button className="text-blue-600 underline mt-2">CLEAR</button>
+          <button className="text-blue-600 underline mt-2 text-sm md:text-base">CLEAR</button>
         </aside>
 
-    
         <main className="w-full lg:w-3/4">
-          <div className="flex justify-between items-center mb-4">
-            <div className="flex gap-4 text-sm">
+          <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-4 gap-3">
+            <div className="flex flex-wrap gap-3 text-sm">
               <span className="font-semibold">Sort by:</span>
               <button className="hover:text-blue-600">NEWEST</button>
               <button className="hover:text-blue-600">POPULAR</button>
               <button className="hover:text-blue-600">PRICE (HIGH TO LOW)</button>
               <button className="hover:text-blue-600">PRICE (LOW TO HIGH)</button>
             </div>
-            <button className="bg-blue-700 text-white px-3 py-1 text-sm rounded hover:bg-blue-800">
-               SEARCH
+            <button className="bg-blue-700 text-white px-4 py-2 text-sm rounded hover:bg-blue-800">
+              SEARCH
             </button>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
             {properties.map((item) => (
-              <div key={item.id} className="bg-white rounded shadow overflow-hidden">
+              <div key={item.id} className="bg-white rounded shadow overflow-hidden flex flex-col">
                 <div className="relative">
                   <img src={item.img} alt={item.title} className="w-full h-48 object-cover" />
                   <span className="absolute top-2 right-2 bg-blue-600 text-white text-xs px-2 py-1 rounded">
                     FOR SALE
                   </span>
                 </div>
-
-                <div className="p-4">
-                  <h3 className="text-md font-semibold">{item.title}</h3>
+                <div className="p-4 flex flex-col flex-grow">
+                  <h3 className="text-base md:text-md font-semibold">{item.title}</h3>
                   <p className="text-blue-700 mt-1 font-semibold">{item.price}</p>
                   <p className="text-sm text-gray-600 mt-1">Type: {item.type}</p>
-                  <div className="mt-3 flex justify-between text-sm text-gray-700">
+                  <div className="mt-auto flex justify-between text-sm text-gray-700 pt-3">
                     <button className="hover:text-blue-700">COMPARE</button>
                     <button className="hover:text-blue-700">DETAILS &gt;</button>
                   </div>
